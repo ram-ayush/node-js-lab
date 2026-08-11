@@ -1,0 +1,20 @@
+1. What is the Event Loop?
+
+Ans-The Event Loop is an important part of Node.js that helps handle multiple tasks.
+It continuously checks for completed asynchronous operations.
+When an operation is completed, the Event Loop helps execute its callback.
+This allows Node.js to handle many requests without waiting for every task to finish.
+
+2. Is Node.js single-threaded or multi-threaded? Explain.
+
+Ans-Node.js uses a single main thread for executing JavaScript code.
+It uses an Event Loop to handle many operations efficiently.
+Some tasks can be handled in the background using the libuv thread pool.
+Therefore, Node.js is mainly single-threaded for JavaScript execution but can use multiple threads for certain background operations.
+
+3. What is the role of libuv?
+
+Ans-libuv is a library used by Node.js to handle asynchronous operations.
+It provides the Event Loop that helps Node.js process tasks efficiently.
+It also manages background operations using a thread pool when required.
+Because of libuv, Node.js can perform non-blocking operations efficiently.
