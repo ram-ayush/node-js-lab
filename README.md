@@ -1,53 +1,22 @@
-# Node.js Lab Assignment - 02
+## Lab 03 - Student Directory API
 
-## Lab Number
-02
+### Routes
 
-## Topic
-Building Your First Node.js Server
+- GET /items
+  Returns the complete list of cricket players.
 
-## Date
-09 August 2026
+- GET /items/:id
+  Returns one cricket player based on the ID.
 
-## Student Information
+- GET /students/course/BCA
+  Returns only students who are enrolled in BCA.
 
-- Name: Ayush Ram Tripathi
-- Scholar Number: 23145004
-- Course: BCA
-- Semester: BCA VII
-- College: Dev Sanskriti Vishwavidyalaya
+- GET /students/:id
+  Returns one student based on the ID.
 
-## Routes
+- GET /students/abc
+  Returns an error for a non-numeric student ID.
 
-### 1. `/`
-Returns a welcome message containing:
-- Name
-- Scholar Number
-- Course
+### req.url.split()
 
-### 2. `/about`
-Returns a short message about myself.
-
-### 3. `/college`
-Returns:
-- College name
-- Semester
-
-### 4. `/profile`
-Returns student information in JSON format:
-- Name
-- Scholar Number
-- Course
-- Semester
-- College
-
-### 5. Unknown Routes
-Returns:
-- Status Code: 404
-- Message: Page Not Found
-
-## Technologies Used
-
-- Node.js
-- HTTP Module
-- JavaScript
+req.url.split('/') splits the URL into parts so that the ID can be extracted from the URL.
